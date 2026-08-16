@@ -1,0 +1,23 @@
+# render.yaml — GEMINI SIGNAL BOT v3 (Background Worker)
+services:
+  - type: worker
+    name: gemini-signal-bot
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python bot.py
+    envVars:
+      - key: TELEGRAM_TOKEN
+        sync: false
+      - key: ALLOWED_IDS
+        sync: false
+      - key: PO_SSID
+        sync: false
+      - key: PO_ENABLED
+        value: "1"
+      - key: ACCOUNT_BALANCE
+        value: "1000"
+      - key: RISK_PERCENT
+        value: "2"
+      - key: DAILY_LIMIT_PCT
+        value: "6"
