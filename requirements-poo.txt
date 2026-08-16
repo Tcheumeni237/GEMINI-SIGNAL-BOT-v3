@@ -1,1 +1,1 @@
-pocketoptionapi
+pocketoptionapi-async>=2.0.1
